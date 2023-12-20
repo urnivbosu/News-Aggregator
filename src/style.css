@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #161d23;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    background-color: #a1cff0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: #e9ce98;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #a1cff0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.company-logo img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.nav-links ul {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #b3b600;
+}
+
+.hover-link:active {
+    color: rgb(174, 255, 0);
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 2px solid #a6c4dd;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: rgb(210, 234, 120);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--accent-color);
+    color: rgb(210, 234, 120);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #93adca;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #58aea2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px;
+    background-color: #4685b9;
+}
+
+
+.news-source {
+    margin-top: 12px;
+}
+
+
+/* This is for footer */
+
+footer {
+    width: 100%;
+    height: min-content;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 50px 0 30px;
+    border-top-right-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    ;
+
+
+
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col p {
+    color: #c9b2b2;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form fa-regular {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+}
+
+form button .fa-solid {
+    font-size: 16px;
+    color: #fff;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100px;
+    }
+}
+
+@media(max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+
+    .col {
+        flex-basis: 100%;
+
+
+    }
+
+    .col:nth-child(2),
+    .col:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+.sticky-footer {
+    position: sticky;
+    top: 100%;
+}
+
+
+/* Footer design complete */
+
+.logout img {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+}
+
+#creators-section {
+    margin-top: 0px;
+}
+
+#creators-container {
+    gap: 20px;
+}
+
+.creator {
+    text-align: center;
+}
+
+.creator img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.creator p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#creators-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#creators-container {
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.creator {
+    text-align: center;
+    margin: 10px;
+    /* Adjust as needed */
+
+}
+
+.creator img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.creator p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.dark-mode {
+    --primary-text-color: #fff;
+    --secondary-text-color: #ddd;
+    --accent-color: #38300c;
+    --accent-color-dark: #272211;
+    --background-color: #333;
+}
+
+body.dark-mode {
+    background-color: var(--background-color);
+}
+
+nav.dark-mode {
+    background-color: var(--accent-color);
+}
+
+.card.dark-mode {
+    background-color: #2c2c2c;
+    color: var(--primary-text-color);
+}
+
+.dark-mode main {
+    background-color: #2c2c2c;
+}
+
+/* Add this to your existing CSS styles or create a new section for button styles */
+.bottom-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    /* Adjust the background color as needed */
+    color: #fff;
+    /* Adjust the text color as needed */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+/* Add this CSS for dark mode */
+body.dark-mode {
+    /* Dark mode styles */
+    background-color: #1a1a1a;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color */
+}
+
+.dark-mode .search-button,
+.dark-mode .dropbtn {
+    background-color: #e2d75c;
+    /* Light background color for buttons */
+    color: #000;
+    /* Dark text color for buttons */
+}
+
+/* Other existing styles for buttons */
+.search-button,
+.dropbtn {
+    background-color: var(--accent-color);
+    color: rgb(210, 234, 120);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover,
+.dropbtn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.btnn {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    background-color: #012949;
+    color: #2294ed;
+}
+
+.btnn button {
+    transition-duration: 0.4s;
+    background-color: #f392e9;
+    border-radius: 100%;
+    padding: 15px 15px;
+}
+
+.btnn button:hover {
+    /* Green */
+    color: white;
+    background-color: #1d69a3;
+}
+
+.buttons {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(240, 61, 61);
+    color: #fff;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.hover:hover {
+    background-color: #5288b4;
+    color: black;
+}
+
+.two {
+    background-color: rgb(152, 77, 152);
+    color: white;
+}
+
+.round {
+    border-radius: 20%;
+}

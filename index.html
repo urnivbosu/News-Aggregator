@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/98e65ba291.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./logo.png" alt="company logo">
+                
+            </a>
+            
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-link nav-item" id="health" onclick="onNavItemClick('health')">Health</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="education" onclick="onNavItemClick('education')">Education</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="environment" onclick="onNavItemClick('environment')">Environment</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="eg- Sports">
+                <button id="search-button" class="search-button">Search</button>
+                <button class="dropbtn" onclick="toggleDarkMode()">
+                    <div class="dark-mode-toggle" >
+                        <i class="fa fa-sun-o" aria-hidden="true"></i>
+                    </div>
+                </button>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    
+                    <div class="dropdown-content" id="dropdown-content">
+                        <a href="#">My Profile</a>
+                        <a href="#" onclick="toggleDropdown()">My Bookmarks</a>
+                        <a href="#" onclick="reload()">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                <a style="text-decoration: none; color: rgb(0, 26, 255);">
+                    <span style="display: flex; justify-content: flex-end; margin-right: 15px;">
+                        <i class="fa fa-bookmark-o" href="www.google.com" style="font-size:36px;"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe
+                    quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <div class="buttons">
+        <button class="one round hover" id="prevButton">Previous</button>
+        <button class="two round hover" id="nextButton">Next</button>
+    </div>
+    
+    <section id="creators-section" class="container">
+        <h2>Website Created By</h2>
+        <div id="creators-container" class="flex">
+            <div class="creator">
+                <img src="ajit.png" alt="Person 1">
+                <p>Ajit Mishra</p>
+            </div>
+            <div class="creator">
+                <img src="urniv.png" alt="Person 2">
+                <p>Urniv Bosu</p>
+            </div>
+            <div class="creator">
+                <img src="nishendu.png" alt="Person 3">
+                <p>Nishendu Mishra</p>
+            </div>
+            <div class="creator">
+                <img src="priyanshu.png" alt="Person 4">
+                <p>Priyanshu Singh</p>
+            </div>
+            <div class="creator">
+                <img src="varun.png" alt="Person 5">
+                <p>Varun Sharma</p>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <footer class="sticky-footer">
+        <div class="row">
+           <div class="col">
+            <img src="logo.png" class="logo">
+            <p>This is the official website of News Hut. You can comeback here for latest news updates regarding the recent ongoing activites in the world!</p>
+           </div>
+           <div class="col">
+            <h3>Office <div class="underline"><span></span></div> </h3>
+            <p>VIT Chennai</p>
+            <p>Vandalur-Kelambakkam Road, Chennai(600127)</p>
+            <p class="email-id">newshutofficial@gmail.com</p>
+            <h4>+91-988399829</h4>
+
+           </div>
+           <div class="col">
+            <h3>Links <div class="underline"><span></span></div> </h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+           </div>
+           <div class="col">
+            <h3>News letters <div class="underline"><span></span></div> </h3>
+            <form >
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+           </div>
+        </div>
+        <hr>
+        <p class="copyright">News Hut Private Limited © 2023 - All Rights Reserved </p>
+    </footer>
+    <button id="bottom-to-top" class="bottom-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
